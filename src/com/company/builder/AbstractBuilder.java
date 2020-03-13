@@ -1,18 +1,18 @@
 package com.company.builder;
 
 public abstract class AbstractBuilder {
-    protected Product product = null;
+    protected Product product = new Product();
 
-    public void buildPartA(String partA) {
-        product.setPartA(partA);
+    public void buildPartA() {
+
     }
 
-    public void buildPartB(String partB) {
-        product.setPartA(partB);
+    public void buildPartB() {
+
     }
 
-    public void buildPartC(String partC) {
-        product.setPartA(partC);
+    public void buildPartC() {
+
     }
 
     public Product getResult() {

@@ -2,20 +2,20 @@ package com.company.builder;
 
 public class ConcreteBuilder extends AbstractBuilder {
     @Override
-    public void buildPartA(String partA) {
+    public void buildPartA() {
         System.out.println("ConcreteBuilder build part A");
-        super.buildPartA(partA);
+        super.product.setPartA("I");
     }
 
     @Override
-    public void buildPartB(String partB) {
+    public void buildPartB() {
         System.out.println("ConcreteBuilder build part B");
-        super.buildPartB(partB);
+        super.product.setPartB("love");
     }
 
     @Override
-    public void buildPartC(String partC) {
+    public void buildPartC() {
         System.out.println("ConcreteBuilder build part C");
-        super.buildPartC(partC);
+        super.product.setPartC("you");
     }
 }
