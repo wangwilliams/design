@@ -1,9 +1,5 @@
 package com.company.adapter;
 
-interface Target {
-    public void Request();
-}
-
 /**
  * 类继承的写法
  */
@@ -13,6 +9,10 @@ public class AdapteeTest {
         Target target = new ClassAdapter();
         target.Request();
     }
+}
+
+interface Target {
+    public void Request();
 }
 
 class Adaptee {
