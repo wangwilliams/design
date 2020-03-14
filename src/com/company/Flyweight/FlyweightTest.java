@@ -21,7 +21,7 @@ public class FlyweightTest {
         f02.operation(new UnsharedConcreteFlyweight("第二次调用a。"));
         f03.operation(new UnsharedConcreteFlyweight("第三次调用a。"));
         f11.operation(new UnsharedConcreteFlyweight("第一次调用b。"));
-        f12.operation(new UnsharedConcreteFlyweight("第二次调用a。"));
+        f12.operation(new UnsharedConcreteFlyweight("第二次调用b。"));
     }
 }
 
