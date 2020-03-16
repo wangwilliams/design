@@ -50,7 +50,7 @@ class ConcreteMediator extends Mediator {
 }
 
 abstract class Colleague {
-    public Mediator mediator;
+    protected Mediator mediator;
 
     public abstract void setMediator(Mediator mediator);
 
