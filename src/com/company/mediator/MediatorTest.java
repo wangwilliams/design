@@ -70,6 +70,7 @@ class ColleagueA extends Colleague {
     @Override
     public void receive() {
         System.out.println("colleague A receive!");
+        System.out.println("lalala");
     }
 
     @Override
