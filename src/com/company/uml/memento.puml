@@ -1,0 +1,25 @@
+@startuml
+class Originator{
+    -state : String
+    +setState(String state) : void
+    +getState() : String
+    +createMemento() : Memento
+    +restoreMemento(Memento m) : void
+}
+class Memento{
+ -state:String
+ +Memento(String state)
+ +setState(String state) : void
+ +getState() : String
+}
+Originator-->Memento
+class Caretaker{
+    -memento : Memento
+    +setMemento(Memento m) : void
+    +getMemento() : Memento
+}
+Caretaker*-right-Memento
+class MementoPattern
+MementoPattern -r.>Originator
+MementoPattern -d.>Caretaker
+@enduml

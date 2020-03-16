@@ -1,0 +1,40 @@
+@startuml
+abstract class Colleague{
+    #mediator:Mediator
+    +setMediator(Mediator mediator):void
+    +receive():void
+    +send(Colleague colleague):void
+}
+
+class ColleagueA{
+    +setMediator(Mediator mediator):void
+    +receive():void
+    +send(Colleague colleague):void
+}
+
+class ColleagueB{
+    +setMediator(Mediator mediator):void
+    +receive():void
+    +send(Colleague colleague):void
+}
+class ColleagueC{
+    +setMediator(Mediator mediator):void
+    +receive():void
+    +send(Colleague colleague):void
+}
+ColleagueA-up-|>Colleague
+ColleagueB-up-|>Colleague
+ColleagueC-up-|>Colleague
+
+abstract class Mediator{
+    +register(Colleague colleague)：void
+    +relay(Colleague cl)：void
+}
+class ConcreteMediator{
+    -List<Colleague> colleagues
+    +register(Colleague colleague)：void
+    +relay(Colleague cl)：void
+}
+Mediator<|--ConcreteMediator
+Colleague-right--*ConcreteMediator
+@enduml
